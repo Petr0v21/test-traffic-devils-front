@@ -2,8 +2,6 @@ import React, {useContext} from "react";
 import {Link} from "react-router-dom";
 import styled from "styled-components";
 import AuthContext from "../../../context/AuthContext";
-import {device} from "../../styled-components/size";
-import BackMenu from "../../../static/images/NavBarSmallBack.svg";
 import ProfilIcon from "../../../static/images/ownerwhite.svg";
 
 const HeaderStyled = styled.div<{back?: boolean}>`
