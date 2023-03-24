@@ -9,7 +9,6 @@ import AdminPanel from "./pages/AdminPanel";
 
 const App = () => {
   const {token, refreshToken, login, logout, userName} = useAuth();
-  const [activeToken, setActiveToken] = useState(false);
 
   const isAuthenticated = !!token;
   const check = async () => {

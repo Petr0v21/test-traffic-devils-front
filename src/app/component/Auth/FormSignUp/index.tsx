@@ -1,7 +1,6 @@
 import {observer} from "mobx-react";
-import React, {useContext, useState} from "react";
+import React from "react";
 import {Link, useNavigate} from "react-router-dom";
-import AuthContext from "../../../../context/AuthContext";
 import store from "../../../../stores/authStore";
 import CheckBoxComponet from "../../../styled-components/SmallChecks";
 import {Button} from "../../../styled-components/Button";
