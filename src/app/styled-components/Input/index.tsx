@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import eyeShow from "../../../static/images/Show.svg";
 import eyeHide from "../../../static/images/Hide.svg";
-import search from "../../../static/images/Search.svg";
-import arrow from "../../../static/images/ArrowDownBlack.svg";
 
 export type InputProps = {
   hideArrows?: boolean;
@@ -161,18 +159,6 @@ export const TextAreaStyled = styled.div<InputProps>`
 `;
 
 export const InputComponentChildren: React.FC<InputProps> = (props) => {
-  if (props.img) {
-    return (
-      <InputDefault {...props}>
-        {props.children}
-        <img
-          src={props.link ?? arrow}
-          alt="img"
-          onClick={() => console.log("Click")}
-        />
-      </InputDefault>
-    );
-  }
   return <InputDefault {...props}>{props.children}</InputDefault>;
 };
 
@@ -206,28 +192,6 @@ export const InputDefaultComponent: React.FC<InputProps> = (props) => {
           alt="eye"
           onClick={() => setShow(!show)}
         />
-      </InputDefault>
-    );
-  } else if (props.type === "search") {
-    return (
-      <InputDefault {...props}>
-        <input
-          value={props.val ?? undefined}
-          type="text"
-          required
-          name={props.name ?? "title"}
-          onChange={(event) => {
-            if (props.store) {
-              props.store.addField(event);
-            } else {
-              console.log("change");
-            }
-          }}
-          disabled={props.disable ?? false}
-          autoComplete="off"
-          placeholder={props.text ?? "Search .."}
-        />
-        <img src={search} alt="Search" onClick={() => console.log("Click")} />
       </InputDefault>
     );
   } else {
