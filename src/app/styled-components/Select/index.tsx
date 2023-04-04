@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
-import InputComponent, { InputProps } from "../Input/";
+import InputComponent, {InputProps} from "../Input/";
 import arrow from "../../../static/images/ArrowDownBlack.svg";
 
 export const InputSelectDefault = styled.div<InputProps>`
